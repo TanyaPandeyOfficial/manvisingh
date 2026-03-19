@@ -16,7 +16,6 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // Aapki Pixel ID yahan set kar di gayi hai
     fbq('init', '952645657091397'); 
     fbq('track', 'PageView');
     </script>
@@ -50,8 +49,8 @@
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(30px);
             border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 50px;
-            padding: 50px 20px;
+            border-radius: 40px;
+            padding: 60px 20px 40px; /* Top padding badha diya hai taaki notif sahi dikhe */
             text-align: center;
             box-shadow: 0 50px 100px rgba(0,0,0,1);
             position: relative;
@@ -60,117 +59,100 @@
 
         .live-notif {
             position: absolute;
-            top: 20px;
+            top: 15px; /* Top position sahi kar di hai */
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 5px 15px;
+            background: rgba(0, 255, 136, 0.1);
+            padding: 6px 18px;
             border-radius: 50px;
-            font-size: 0.65rem;
-            border: 1px solid rgba(0, 255, 136, 0.3);
+            font-size: 0.7rem;
+            border: 1px solid var(--neon-green);
             color: var(--neon-green);
-            animation: slideDown 0.5s ease-out;
-            white-space: nowrap;
+            animation: pulse 1.5s infinite;
+            white-space: nowrap; /* Taki text ek hi line mein rahe */
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; transform: translateX(-50%) scale(0.98); }
+            50% { opacity: 1; transform: translateX(-50%) scale(1); }
+            100% { opacity: 0.6; transform: translateX(-50%) scale(0.98); }
         }
 
         .profile-img {
-            width: 150px; height: 150px;
+            width: 140px; height: 140px;
             border-radius: 50%;
-            border: 4px solid #FFD700;
-            padding: 6px;
+            border: 3px solid #FFD700;
+            padding: 5px;
             background: #000;
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
-            margin-bottom: 25px;
+            margin-bottom: 25px; /* DP aur Headline ke beech gap */
+            object-fit: cover;
+            display: inline-block; /* Alignment fix */
         }
 
         h1 {
             font-family: 'Syncopate', sans-serif;
-            font-size: 1.6rem;
-            letter-spacing: 4px;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
             margin-bottom: 5px;
             background: var(--gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .headline { font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; color: #fff; }
-        .sub-headline { font-size: 0.9rem; color: #aaa; margin-bottom: 30px; line-height: 1.5; }
-
-        .counter-box {
-            background: rgba(255, 255, 255, 0.05);
-            margin-bottom: 30px;
-            padding: 15px;
-            border-radius: 25px;
-            border: 1px dashed #FFD700;
-        }
-        .counter-box p { font-size: 0.7rem; color: #FFD700; text-transform: uppercase; margin-bottom: 5px; font-weight: 800; }
-        .counter-box span { font-size: 1.8rem; font-weight: 900; color: #fff; }
+        .headline { font-size: 1.6rem; font-weight: 900; margin-bottom: 12px; color: #fff; line-height: 1.2; }
+        .sub-headline { font-size: 0.95rem; color: #ccc; margin-bottom: 25px; line-height: 1.5; }
 
         .vvip-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
+            display: block;
+            padding: 22px;
             background: var(--gold);
             color: #000;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 20px;
             font-weight: 900;
-            font-size: 1.3rem;
-            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.4);
+            font-size: 1.4rem;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
             animation: growShrink 2s infinite ease-in-out;
             cursor: pointer;
+            text-transform: uppercase;
         }
 
-        @keyframes growShrink { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes growShrink { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 
-        .feature-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 0.85rem; color: #ccc; justify-content: center; }
+        .feature-box { margin-top: 25px; text-align: left; display: inline-block; }
+        .feature-item { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: #eee; }
         .check { color: var(--neon-green); font-weight: 900; }
-        @keyframes slideDown { from { top: -50px; opacity: 0; } to { top: 20px; opacity: 1; } }
     </style>
 </head>
 <body>
 
     <div class="main-card">
-        <div class="live-notif">⚡ MATCH REPORT IS LIVE NOW!</div>
+        <div class="live-notif">● TODAY'S MATCH REPORT IS READY!</div>
 
         <img src="https://i.ibb.co/LDvrWxYH/IMG-20260318-235941-002.jpg" class="profile-img" alt="Manvi Singh">
 
         <h1>MANVI SINGH</h1>
-        <div class="headline">RECOVER ALL YOUR LOSS 🏆</div>
+        <div class="headline">RECOVER YOUR LOSS TODAY! 🏆</div>
         
         <p class="sub-headline">
-            Agar aapka loss <span style="color:#FF4B2B; font-weight: 800;">5 Lakh+</span> hai, toh ab tension chhoro. <br>
-            <b>100% Fixed Reports directly from Ground.</b>
+            Don't bet blindly. Get <span style="color:#FFD700; font-weight: 800;">100% Accuracy</span> 
+            Directly from Ground Reports. Back-to-Back Jackpot Pass!
         </p>
 
-        <div class="counter-box">
-            <p>DAILY PROFIT GENERATED</p>
-            <span>₹<span id="profit">48,500</span>+</span>
-        </div>
-
         <a href="https://t.me/+wJEWoUQtM_9jMGM1" class="vvip-btn" onclick="fbq('track', 'Lead');">
-            ENTER VVIP CHANNEL
+            JOIN TELEGRAM NOW
         </a>
 
-        <div style="margin-top: 35px;">
-            <div class="feature-item"><span class="check">✓</span> 95% Accuracy in All Formats</div>
-            <div class="feature-item"><span class="check">✓</span> Back-to-Back Jackpot Pass</div>
+        <div class="feature-box">
+            <div class="feature-item"><span class="check">✓</span> 95% Accuracy Guaranteed</div>
+            <div class="feature-item"><span class="check">✓</span> Free Toss & Match Sessions</div>
+            <div class="feature-item"><span class="check">✓</span> IPL 2026 Special Reports</div>
         </div>
 
-        <p style="margin-top: 30px; font-size: 0.6rem; color: #444; letter-spacing: 2px;">
-            STRICTLY 18+ | NO LOSS GUARANTEE
+        <p style="margin-top: 25px; font-size: 0.65rem; color: #666; letter-spacing: 1px;">
+            JOIN ONLY IF YOU WANT TO WIN | 18+ ONLY
         </p>
     </div>
 
-    <script>
-        let count = 48500;
-        setInterval(() => {
-            count += Math.floor(Math.random() * 500);
-            document.getElementById('profit').innerText = count.toLocaleString();
-        }, 3000);
-    </script>
-
 </body>
 </html>
-
