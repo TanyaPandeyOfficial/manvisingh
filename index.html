@@ -18,6 +18,11 @@
     
     fbq('init', '952645657091397'); 
     fbq('track', 'PageView');
+
+    // Custom function to track Lead properly
+    function handleLeadClick() {
+        fbq('track', 'Lead');
+    }
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=952645657091397&ev=PageView&noscript=1"
@@ -50,7 +55,7 @@
             backdrop-filter: blur(30px);
             border: 1px solid rgba(255, 215, 0, 0.2);
             border-radius: 40px;
-            padding: 60px 20px 40px; /* Top padding badha diya hai taaki notif sahi dikhe */
+            padding: 60px 20px 40px;
             text-align: center;
             box-shadow: 0 50px 100px rgba(0,0,0,1);
             position: relative;
@@ -59,7 +64,7 @@
 
         .live-notif {
             position: absolute;
-            top: 15px; /* Top position sahi kar di hai */
+            top: 15px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(0, 255, 136, 0.1);
@@ -69,7 +74,7 @@
             border: 1px solid var(--neon-green);
             color: var(--neon-green);
             animation: pulse 1.5s infinite;
-            white-space: nowrap; /* Taki text ek hi line mein rahe */
+            white-space: nowrap;
         }
 
         @keyframes pulse {
@@ -84,9 +89,9 @@
             border: 3px solid #FFD700;
             padding: 5px;
             background: #000;
-            margin-bottom: 25px; /* DP aur Headline ke beech gap */
+            margin-bottom: 25px;
             object-fit: cover;
-            display: inline-block; /* Alignment fix */
+            display: inline-block;
         }
 
         h1 {
@@ -139,7 +144,7 @@
             Directly from Ground Reports. Back-to-Back Jackpot Pass!
         </p>
 
-        <a href="https://t.me/+wJEWoUQtM_9jMGM1" class="vvip-btn" onclick="fbq('track', 'Lead');">
+        <a href="https://t.me/+wJEWoUQtM_9jMGM1" class="vvip-btn" onclick="handleLeadClick();">
             JOIN TELEGRAM NOW
         </a>
 
