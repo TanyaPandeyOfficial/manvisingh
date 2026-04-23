@@ -1,163 +1,164 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MANVI SINGH | VIP CRICKET PREDICTIONS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
-
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    
-    fbq('init', '952645657091397'); 
-    fbq('track', 'PageView');
-
-    // Custom function to track Lead properly
-    function handleLeadClick() {
-        fbq('track', 'Lead');
-    }
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=952645657091397&ev=PageView&noscript=1"
-    /></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanya Pandey | Cricket Legend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --gold: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
-            --neon-green: #00FF88;
-            --bg-dark: #050505;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            background-color: var(--bg-dark);
-            color: #fff;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            background: #05070a;
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: radial-gradient(circle at top right, #1a3a1a 0%, #050505 50%),
-                        radial-gradient(circle at bottom left, #1a1a00 0%, #050505 50%);
+            padding: 20px;
         }
 
-        .main-card {
-            width: 92%;
-            max-width: 420px;
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(30px);
-            border: 1px solid rgba(255, 215, 0, 0.2);
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, #fcc41933, transparent 50%);
+            z-index: -1;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 480px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 40px;
-            padding: 60px 20px 40px;
-            text-align: center;
-            box-shadow: 0 50px 100px rgba(0,0,0,1);
-            position: relative;
             overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.7);
+            text-align: center;
+            padding-bottom: 20px;
         }
 
-        .live-notif {
-            position: absolute;
-            top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 255, 136, 0.1);
-            padding: 6px 18px;
+        /* Live User Counter */
+        .live-counter {
+            background: rgba(76, 175, 80, 0.1);
+            color: #4caf50;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             border-radius: 50px;
-            font-size: 0.7rem;
-            border: 1px solid var(--neon-green);
-            color: var(--neon-green);
-            animation: pulse 1.5s infinite;
-            white-space: nowrap;
+            margin-top: 25px;
+            border: 1px solid rgba(76, 175, 80, 0.2);
         }
 
-        @keyframes pulse {
-            0% { opacity: 0.6; transform: translateX(-50%) scale(0.98); }
-            50% { opacity: 1; transform: translateX(-50%) scale(1); }
-            100% { opacity: 0.6; transform: translateX(-50%) scale(0.98); }
-        }
-
-        .profile-img {
-            width: 140px; height: 140px;
+        .pulse-dot {
+            height: 8px; width: 8px;
+            background: #4caf50;
             border-radius: 50%;
-            border: 3px solid #FFD700;
-            padding: 5px;
-            background: #000;
-            margin-bottom: 25px;
-            object-fit: cover;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse { 0% { transform: scale(0.9); opacity: 1; } 70% { transform: scale(2); opacity: 0; } 100% { transform: scale(0.9); opacity: 0; } }
+
+        .header { padding: 25px 20px 20px; }
+
+        .logo-wrapper {
+            position: relative;
             display: inline-block;
+            padding: 5px;
+            background: linear-gradient(45deg, #fcc419, transparent);
+            border-radius: 50%;
+            margin-bottom: 15px;
         }
 
-        h1 {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.4rem;
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-            background: var(--gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .logo { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #05070a; object-fit: cover; }
+
+        .brand-name { font-weight: 900; font-size: 32px; color: #fcc419; text-transform: uppercase; }
+
+        .sub-tag { font-size: 11px; letter-spacing: 4px; color: #888; margin-bottom: 25px; }
+
+        .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 25px; margin-bottom: 25px; }
+        .trust-item { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .trust-item h4 { color: #fcc419; font-size: 18px; }
+        .trust-item p { font-size: 10px; color: #aaa; text-transform: uppercase; margin-top: 5px; }
+
+        .review-box { background: rgba(252, 196, 25, 0.05); margin: 0 25px 30px; padding: 15px; border-radius: 20px; font-style: italic; font-size: 13px; border-left: 4px solid #fcc419; text-align: left; }
+
+        .join-now-btn {
+            background: linear-gradient(90deg, #fcc419, #ff9800);
+            color: #000; text-decoration: none; display: block; margin: 0 25px;
+            padding: 22px; border-radius: 25px; font-weight: 800; font-size: 18px;
+            box-shadow: 0 15px 30px rgba(252, 196, 25, 0.3); transition: 0.3s;
+            position: relative; overflow: hidden;
         }
 
-        .headline { font-size: 1.6rem; font-weight: 900; margin-bottom: 12px; color: #fff; line-height: 1.2; }
-        .sub-headline { font-size: 0.95rem; color: #ccc; margin-bottom: 25px; line-height: 1.5; }
-
-        .vvip-btn {
-            display: block;
-            padding: 22px;
-            background: var(--gold);
-            color: #000;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: 900;
-            font-size: 1.4rem;
-            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
-            animation: growShrink 2s infinite ease-in-out;
-            cursor: pointer;
-            text-transform: uppercase;
+        .join-now-btn::after {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%; background: rgba(255,255,255,0.2);
+            transform: rotate(45deg); animation: shine 3s infinite;
         }
 
-        @keyframes growShrink { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+        @keyframes shine { 0% { left: -150%; } 100% { left: 150%; } }
 
-        .feature-box { margin-top: 25px; text-align: left; display: inline-block; }
-        .feature-item { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: #eee; }
-        .check { color: var(--neon-green); font-weight: 900; }
+        .footer { padding: 25px; font-size: 11px; color: #555; }
+        .highlight { color: #4caf50; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="main-card">
-        <div class="live-notif">● TODAY'S MATCH REPORT IS READY!</div>
+    <div class="bg-glow"></div>
 
-        <img src="https://i.ibb.co/LDvrWxYH/IMG-20260318-235941-002.jpg" class="profile-img" alt="Manvi Singh">
-
-        <h1>MANVI SINGH</h1>
-        <div class="headline">RECOVER YOUR LOSS TODAY! 🏆</div>
-        
-        <p class="sub-headline">
-            Don't bet blindly. Get <span style="color:#FFD700; font-weight: 800;">100% Accuracy</span> 
-            Directly from Ground Reports. Back-to-Back Jackpot Pass!
-        </p>
-
-        <a href="https://t.me/+wJEWoUQtM_9jMGM1" class="vvip-btn" onclick="handleLeadClick();">
-            JOIN TELEGRAM NOW
-        </a>
-
-        <div class="feature-box">
-            <div class="feature-item"><span class="check">✓</span> 95% Accuracy Guaranteed</div>
-            <div class="feature-item"><span class="check">✓</span> Free Toss & Match Sessions</div>
-            <div class="feature-item"><span class="check">✓</span> IPL 2026 Special Reports</div>
+    <div class="main-container">
+        <div class="live-counter">
+            <div class="pulse-dot"></div>
+            <span id="user-count">254</span> People Viewing Now
         </div>
 
-        <p style="margin-top: 25px; font-size: 0.65rem; color: #666; letter-spacing: 1px;">
-            JOIN ONLY IF YOU WANT TO WIN | 18+ ONLY
-        </p>
+        <div class="header">
+            <div class="logo-wrapper">
+                <img src="https://i.ibb.co/x8D5nR3G/IMG-20251216-140338.jpg" alt="Tanya Pandey" class="logo">
+            </div>
+            <div class="brand-name">TANYA PANDEY</div>
+            <div class="sub-tag">Cricket Prediction Expert</div>
+        </div>
+
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h4>97%</h4>
+                <p>Pass Accuracy</p>
+            </div>
+            <div class="trust-item">
+                <h4>7+ Yrs</h4>
+                <p>Market Experience</p>
+            </div>
+        </div>
+
+        <div class="review-box">
+            "Best prediction in the market! Back to back match and toss pass in IPL. Thank you Tanya ma'am!"<br>
+            <span style="font-weight:bold; font-style:normal; font-size:11px; color:#fcc419;">— Verified Member</span>
+        </div>
+
+        <a href="https://t.me/+b9-wtoTKOB5hNTll" class="join-now-btn">
+            CLICK TO JOIN FOR FREE
+        </a>
+
+        <div class="footer">
+            <p><span class="highlight">●</span> Live Match Analysis & Tips</p>
+            <p style="margin-top:10px;">ESTABLISHED SINCE 2017 | TRUSTED BY THOUSANDS</p>
+        </div>
     </div>
+
+    <script>
+        // Live User Counter Script
+        setInterval(() => {
+            let countEl = document.getElementById('user-count');
+            let current = parseInt(countEl.innerText);
+            countEl.innerText = current + (Math.random() > 0.5 ? 1 : -1);
+        }, 3000);
+    </script>
 
 </body>
 </html>
